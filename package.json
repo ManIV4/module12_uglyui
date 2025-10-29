@@ -6,8 +6,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
-  },
+"lint": "npx eslint ."  },
 
   
   "repository": {
@@ -26,5 +25,6 @@
     "globals": "^16.4.0"
   }
 
-  
+
+
 }
