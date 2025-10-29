@@ -1,0 +1,44 @@
+# Name of the workflow
+name: Deploy Static Site to GitHub Pages
+
+# Run this workflow on every push to the 'main' branch
+on:
+  push:
+    branches: ["main"]
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # The job that builds and deploys the site
+  deploy:
+    runs-on: ubuntu-latest # Use the latest version of Ubuntu
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use Node.js version 20
+
+      - name: Install dependencies
+        run: npm install # Install ESLint
+
+      - name: Run JS Linter Quality Check
+        run: npm run lint # Run the linting script we defined in package.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Upload the entire root directory as the site artifact
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # This action does the deployment
