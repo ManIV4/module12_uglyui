@@ -15,6 +15,17 @@ permissions:
 jobs:
   # The job that builds and deploys the site
   deploy:
+
+  - name: Install dependencies
+    run: npm install
+
+  # Add this new step to fix permissions
+  - name: Add execute permission to eslint
+    run: chmod +x ./node_modules/.bin/eslint
+
+  - name: Run JS Linter Quality Check
+    run: npm run lint
+    
     runs-on: ubuntu-latest # Use the latest version of Ubuntu
     steps:
       - name: Checkout repository
