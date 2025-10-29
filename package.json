@@ -1,11 +1,15 @@
 {
+  
   "name": "uglyui",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
+
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ManIV4/module12_uglyui.git"
