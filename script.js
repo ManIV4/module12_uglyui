@@ -1,2 +1,2 @@
 
-console.log("Site loaded successfully!");
+console.log("Site loaded successfully!")
