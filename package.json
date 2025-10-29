@@ -1,0 +1,24 @@
+{
+  "name": "uglyui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManIV4/module12_uglyui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManIV4/module12_uglyui/issues"
+  },
+  "homepage": "https://github.com/ManIV4/module12_uglyui#readme",
+  "devDependencies": {
+    "eslint": "^9.38.0",
+    "globals": "^16.4.0"
+  }
+}
