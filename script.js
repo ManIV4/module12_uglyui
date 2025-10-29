@@ -39,6 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Apply the saved theme when the page first loads
-  applySavedTheme();
-});
-});
+  applySavedTheme(
+})
+})
